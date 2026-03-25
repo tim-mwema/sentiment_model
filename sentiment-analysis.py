@@ -5,8 +5,6 @@ os.makedirs("F:/hf_cache", exist_ok=True)
 import streamlit as st 
 import pandas as pd 
 from transformers import pipeline
-import torch
-import accelerate
 
 #page configuration for streamlit app
 st.set_page_config(
