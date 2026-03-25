@@ -46,7 +46,7 @@ with tab1:
 #tabs2
 with tab2:
     st.header("Analyse the Dataset(csv)")
-    uploaded_file = st.file_uploader("upload your csv with employee sentiment")
+    uploaded_file = st.file_uploader("upload your csv with employee sentiment rename your target column to review_text")
     
     if uploaded_file is not None:
         #reading the csv file
