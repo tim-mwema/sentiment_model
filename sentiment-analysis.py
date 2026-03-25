@@ -31,7 +31,7 @@ with tab1:
     st.header("Analyze the single review ")
     user_input = st.text_area("Please enter the employee review","The organization does not have medical cover")
     
-    if st.button("Analyze Sentiment"):
+    if st.button("Analyze Sentiment",type="primary"):
         if user_input:
             #run the model
             result=sentiment_pipeline(user_input)
@@ -59,7 +59,7 @@ with tab2:
         text_column = "review_text"
         
         if text_column in df.columns:
-            if st.button("Analyze the entire dataset"):
+            if st.button("Analyze the entire dataset",type="primary"):
                 st.write("Analysing...this might take a while")
                 #apply the model to the text column to analyse the sentiment
                 df["AI_Sentiment"] = df[text_column].apply(lambda x: sentiment_pipeline(str(x)[:400], truncation=True, max_length=512)[0]["label"])
@@ -79,7 +79,8 @@ with tab2:
                     label="Download the sentiment data",
                     data=csv,
                     file_name="Sentiment Analysis file.csv",
-                    mime="text/csv"
+                    mime="text/csv",
+                    type="primary"
                 )
                 
         else:
