@@ -52,7 +52,7 @@ with tab2:
         #reading the csv file
         df=pd.read_csv(uploaded_file)
         #display first few rows of the file 
-        st.write("###Preview of the dataset:")
+        st.write("### Preview of the dataset:")
         st.dataframe(df.head())
         
         # check if 'review_text' column in the dataset uploaded
